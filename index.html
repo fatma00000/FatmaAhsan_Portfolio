@@ -1,3 +1,364 @@
-# FatmaAhsan_Portfolio
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fatma Ahsan | Portfolio</title>
+    <meta
+      name="description"
+      content="Professional academic portfolio website for Fatma Ahsan: research, publications, projects, experience, and contact."
+    />
+    <style>
+      :root {
+        --color-primary: #0A66C2;
+        --color-secondary: #0F172A;
+        --color-accent: #38BDF8;
+        --color-bg: #f8fafc;
+        --color-surface: #ffffff;
+        --color-text: #0f172a;
+        --color-muted: #475569;
+        --color-border: #e2e8f0;
+        --shadow-sm: 0 1px 2px rgb(2 6 23 / 0.08);
+        --shadow-md: 0 8px 24px rgb(2 6 23 / 0.12);
+        --radius-sm: 0.5rem;
+        --radius-md: 0.75rem;
+        --radius-lg: 1rem;
+        --space-2: 0.5rem;
+        --space-3: 0.75rem;
+        --space-4: 1rem;
+        --space-5: 1.25rem;
+        --space-6: 1.5rem;
+        --space-8: 2rem;
+        --transition-fast: 150ms ease;
+      }
 
-This repository is about my homepage layout and its content.
+      [data-theme="dark"] {
+        --color-bg: #020617;
+        --color-surface: #0b1220;
+        --color-text: #e2e8f0;
+        --color-muted: #94a3b8;
+        --color-border: #1e293b;
+        --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.45);
+        --shadow-md: 0 12px 30px rgb(0 0 0 / 0.5);
+      }
+
+      * { box-sizing: border-box; }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+        color: var(--color-text);
+        background: var(--color-bg);
+        line-height: 1.5;
+      }
+
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      }
+
+      .skip-link:focus {
+        left: var(--space-4);
+        top: var(--space-4);
+        width: auto;
+        height: auto;
+        padding: var(--space-3) var(--space-4);
+        background: var(--color-primary);
+        color: #fff;
+        border-radius: var(--radius-sm);
+        z-index: 10000;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid var(--color-border);
+        background: color-mix(in srgb, var(--color-surface) 86%, transparent);
+        backdrop-filter: blur(10px);
+      }
+
+      .nav-shell {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-3) var(--space-4);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-4);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-3);
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: 700;
+        letter-spacing: 0.02em;
+      }
+
+      .brand__mark {
+        width: 2rem;
+        height: 2rem;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+        color: #fff;
+        box-shadow: var(--shadow-sm);
+      }
+
+      .menu-toggle,
+      .theme-toggle {
+        border: 1px solid var(--color-border);
+        background: var(--color-surface);
+        color: var(--color-text);
+        border-radius: var(--radius-sm);
+        min-height: 2.5rem;
+        min-width: 2.5rem;
+        padding: 0 var(--space-3);
+        cursor: pointer;
+        transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+      }
+
+      .menu-toggle:hover,
+      .theme-toggle:hover {
+        border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+      }
+
+      .menu-toggle {
+        display: none;
+        font-weight: 600;
+      }
+
+      .nav-wrap {
+        display: flex;
+        align-items: center;
+        gap: var(--space-4);
+      }
+
+      .nav-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        gap: var(--space-2);
+        flex-wrap: wrap;
+      }
+
+      .nav-link {
+        text-decoration: none;
+        color: var(--color-muted);
+        font-weight: 600;
+        font-size: 0.95rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: var(--radius-sm);
+        transition: color var(--transition-fast), background var(--transition-fast);
+      }
+
+      .nav-link:hover,
+      .nav-link:focus-visible {
+        color: var(--color-primary);
+        background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+        outline: none;
+      }
+
+      .nav-link.active {
+        color: var(--color-primary);
+        background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-8) var(--space-4);
+      }
+
+      section {
+        min-height: 52vh;
+        padding: var(--space-8) 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      h1, h2 {
+        color: var(--color-secondary);
+      }
+
+      [data-theme="dark"] h1,
+      [data-theme="dark"] h2 {
+        color: #e2e8f0;
+      }
+
+      .section-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        padding: var(--space-6);
+      }
+
+      @media (max-width: 980px) {
+        .menu-toggle {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .nav-wrap {
+          position: absolute;
+          top: calc(100% + 1px);
+          left: 0;
+          right: 0;
+          display: none;
+          flex-direction: column;
+          align-items: stretch;
+          gap: var(--space-4);
+          background: var(--color-surface);
+          border-bottom: 1px solid var(--color-border);
+          box-shadow: var(--shadow-md);
+          padding: var(--space-4);
+        }
+
+        .site-header.open .nav-wrap {
+          display: flex;
+        }
+
+        .nav-list {
+          flex-direction: column;
+          align-items: stretch;
+          gap: var(--space-2);
+        }
+
+        .nav-link {
+          display: block;
+          padding: var(--space-3) var(--space-4);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <header class="site-header" id="top">
+      <div class="nav-shell">
+        <a class="brand" href="#home" aria-label="Go to Home section">
+          <span class="brand__mark" aria-hidden="true">F</span>
+          <span>Fatma Ahsan</span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          id="menuToggle"
+          aria-expanded="false"
+          aria-controls="primaryNavigation"
+          aria-label="Open navigation menu"
+          type="button"
+        >
+          Menu
+        </button>
+
+        <nav class="nav-wrap" aria-label="Primary">
+          <ul class="nav-list" id="primaryNavigation">
+            <li><a class="nav-link" href="#home">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#research">Research</a></li>
+            <li><a class="nav-link" href="#publications">Publications</a></li>
+            <li><a class="nav-link" href="#projects">Projects</a></li>
+            <li><a class="nav-link" href="#experience">Experience</a></li>
+            <li><a class="nav-link" href="#education">Education</a></li>
+            <li><a class="nav-link" href="#skills">Skills</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+            🌙
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" aria-labelledby="home-title">
+        <div class="section-card">
+          <h1 id="home-title">Home</h1>
+          <p>Welcome to my academic portfolio.</p>
+        </div>
+      </section>
+      <section id="about" aria-labelledby="about-title"><div class="section-card"><h2 id="about-title">About</h2></div></section>
+      <section id="research" aria-labelledby="research-title"><div class="section-card"><h2 id="research-title">Research</h2></div></section>
+      <section id="publications" aria-labelledby="publications-title"><div class="section-card"><h2 id="publications-title">Publications</h2></div></section>
+      <section id="projects" aria-labelledby="projects-title"><div class="section-card"><h2 id="projects-title">Projects</h2></div></section>
+      <section id="experience" aria-labelledby="experience-title"><div class="section-card"><h2 id="experience-title">Experience</h2></div></section>
+      <section id="education" aria-labelledby="education-title"><div class="section-card"><h2 id="education-title">Education</h2></div></section>
+      <section id="skills" aria-labelledby="skills-title"><div class="section-card"><h2 id="skills-title">Skills</h2></div></section>
+      <section id="contact" aria-labelledby="contact-title"><div class="section-card"><h2 id="contact-title">Contact</h2></div></section>
+    </main>
+
+    <script>
+      const header = document.querySelector('.site-header');
+      const menuToggle = document.getElementById('menuToggle');
+      const themeToggle = document.getElementById('themeToggle');
+      const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+      const sections = Array.from(document.querySelectorAll('main section[id]'));
+      const root = document.documentElement;
+
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        themeToggle.textContent = '☀️';
+      }
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = header.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+      });
+
+      navLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          header.classList.remove('open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+          menuToggle.setAttribute('aria-label', 'Open navigation menu');
+        });
+      });
+
+      themeToggle.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        if (isDark) {
+          root.setAttribute('data-theme', 'light');
+          themeToggle.textContent = '🌙';
+          localStorage.setItem('theme', 'light');
+        } else {
+          root.setAttribute('data-theme', 'dark');
+          themeToggle.textContent = '☀️';
+          localStorage.setItem('theme', 'dark');
+        }
+      });
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach((link) => {
+              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+          });
+        },
+        { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+    </script>
+  </body>
+</html>
