@@ -1,0 +1,50 @@
+:root {
+  --color-primary: #1f3c88;
+  --color-secondary: #263159;
+  --color-accent: #5d76a9;
+  --color-bg: #f8f9fc;
+  --color-surface: #ffffff;
+  --color-text: #1c2434;
+  --color-muted: #5f6c84;
+  --color-border: #d9dfeb;
+  --color-success: #1f7a4d;
+
+  --font-family-base: "Inter", "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.875rem;
+  --font-size-2xl: 2.6rem;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-sm: 0 4px 12px rgba(31, 60, 136, 0.08);
+  --shadow-md: 0 10px 24px rgba(31, 60, 136, 0.12);
+  --shadow-lg: 0 16px 36px rgba(31, 60, 136, 0.16);
+
+  --container-width: 1200px;
+  --transition-fast: 180ms ease;
+  --transition-normal: 300ms ease;
+}
+
+body.dark {
+  --color-bg: #10151f;
+  --color-surface: #151d2b;
+  --color-text: #edf1fa;
+  --color-muted: #afbdd3;
+  --color-border: #2c3b58;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --shadow-md: 0 10px 24px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.45);
+}

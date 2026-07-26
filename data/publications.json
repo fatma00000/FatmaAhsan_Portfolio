@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Trust-Calibrated Multimodal Reasoning for Safety-Critical AI",
+    "journal": "Journal of Artificial Intelligence Research",
+    "conference": "NeurIPS",
+    "journalLogo": "assets/logos/journal-logo.svg",
+    "conferenceLogo": "assets/logos/conference-logo.svg",
+    "type": "Journal + Conference Extended",
+    "year": "2025",
+    "abstract": "We present a calibration-aware multimodal architecture with uncertainty decomposition to improve reliability under distribution shift in high-stakes settings.",
+    "citation": "https://scholar.google.com/",
+    "bibtex": "https://scholar.google.com/",
+    "doi": "https://doi.org/10.1000/example1",
+    "pdf": "https://arxiv.org",
+    "keywords": ["Calibration", "Multimodal AI", "Robustness"],
+    "researchArea": "Trustworthy AI"
+  },
+  {
+    "title": "Efficient Explainability Pipelines for Large-Scale ML Services",
+    "journal": "IEEE Transactions on Neural Networks",
+    "conference": "ICML",
+    "journalLogo": "assets/logos/journal-logo.svg",
+    "conferenceLogo": "assets/logos/conference-logo.svg",
+    "type": "Conference",
+    "year": "2024",
+    "abstract": "This work introduces a modular explainability orchestration layer that reduces latency overhead while preserving faithfulness in production ML workflows.",
+    "citation": "https://scholar.google.com/",
+    "bibtex": "https://scholar.google.com/",
+    "doi": "https://doi.org/10.1000/example2",
+    "pdf": "https://arxiv.org",
+    "keywords": ["Explainable AI", "MLOps", "Model Auditing"],
+    "researchArea": "Applied Machine Learning Systems"
+  }
+]

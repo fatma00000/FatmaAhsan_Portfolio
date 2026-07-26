@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Postdoctoral Research Fellowship in Machine Learning",
+    "organization": "Advanced Computing Institute",
+    "period": "2018 – 2020",
+    "sortYear": "2020",
+    "summary": "Conducted postdoctoral research on robust representation learning and uncertainty-aware optimization.",
+    "highlights": [
+      "Published cross-domain adaptation framework in top-tier venues"
+    ]
+  },
+  {
+    "title": "Ph.D. in Computer Science",
+    "organization": "Global Technical University",
+    "period": "2013 – 2018",
+    "sortYear": "2018",
+    "summary": "Doctoral dissertation on interpretable deep learning for data-intensive applications.",
+    "highlights": [
+      "Graduated with distinction and departmental research honors"
+    ]
+  }
+]

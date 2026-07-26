@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Reliable Clinical NLP Triage Assistant",
+    "thumbnail": "assets/images/project-clinical-nlp.svg",
+    "technologies": ["Python", "PyTorch", "Transformers", "FastAPI", "Docker"],
+    "description": "Decision-support NLP system for triaging patient narratives with calibrated confidence and interpretability diagnostics.",
+    "contributions": [
+      "Designed uncertainty-aware inference with selective prediction",
+      "Built explainability pipeline with clinician-facing rationales",
+      "Implemented monitoring for drift and fairness metrics"
+    ],
+    "challenges": "Balancing model sensitivity with false-positive reduction while maintaining transparency for medical stakeholders.",
+    "results": "Reduced manual triage review time by 34% and improved critical case recall by 12% in pilot environments.",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/fatma00000" },
+      { "label": "Live Demo", "url": "https://example.com" },
+      { "label": "Research Paper", "url": "https://arxiv.org" }
+    ]
+  },
+  {
+    "title": "Adaptive Cyber Threat Intelligence Engine",
+    "thumbnail": "assets/images/project-cyber-ai.svg",
+    "technologies": ["TensorFlow", "Graph Neural Networks", "Kafka", "PostgreSQL"],
+    "description": "Graph-based detection framework for anomaly propagation and attack chain prioritization in enterprise telemetry streams.",
+    "contributions": [
+      "Developed temporal graph embeddings for threat evolution",
+      "Integrated streaming scoring service for low-latency alerts",
+      "Co-authored evaluation methodology for red-team simulation"
+    ],
+    "challenges": "Handling high-throughput data while preserving contextual integrity across distributed event sources.",
+    "results": "Delivered 27% fewer false alarms and accelerated incident investigation cycles by 41%.",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/fatma00000" },
+      { "label": "Live Demo", "url": "https://example.com" },
+      { "label": "Research Paper", "url": "https://arxiv.org" }
+    ]
+  }
+]

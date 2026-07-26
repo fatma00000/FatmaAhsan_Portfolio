@@ -1,0 +1,34 @@
+[
+  {
+    "title": "Senior AI Research Scientist",
+    "organization": "Applied Intelligence Lab",
+    "period": "2023 – Present",
+    "sortYear": "2026",
+    "summary": "Leading a multidisciplinary team delivering robust and interpretable AI systems for public and private sector decision platforms.",
+    "highlights": [
+      "Directed deployment governance for high-impact ML services",
+      "Established reproducible evaluation playbooks across teams"
+    ]
+  },
+  {
+    "title": "Machine Learning Research Engineer",
+    "organization": "Data Systems Innovation Group",
+    "period": "2020 – 2023",
+    "sortYear": "2023",
+    "summary": "Architected deep learning pipelines for multimodal analytics and model monitoring in production-grade environments.",
+    "highlights": [
+      "Built feature-store integrations to standardize experimentation",
+      "Reduced model rollback incidents through reliability diagnostics"
+    ]
+  },
+  {
+    "title": "Research Excellence Award",
+    "organization": "International AI Systems Forum",
+    "period": "2022",
+    "sortYear": "2022",
+    "summary": "Recognized for contributions to transparent and fair machine learning systems.",
+    "highlights": [
+      "Awarded for research translation into deployable systems"
+    ]
+  }
+]

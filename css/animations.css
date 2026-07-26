@@ -1,0 +1,17 @@
+.fade-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.45s ease, transform 0.45s ease;
+}
+.fade-up.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.shape { animation: drift 9s ease-in-out infinite alternate; }
+.shape-two { animation-duration: 11s; }
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-14px); }
+}
