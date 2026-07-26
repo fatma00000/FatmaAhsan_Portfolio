@@ -49,6 +49,7 @@ components/
   experience/
   education/
   contact/
+  testimonials/
 css/
   variables.css
   globals.css

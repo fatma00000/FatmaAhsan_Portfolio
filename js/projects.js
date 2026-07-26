@@ -58,8 +58,8 @@ async function loadProjects() {
 
   const timeline = document.getElementById("timeline-list");
   const merged = [
-    ...education.map((item) => ({ ...item, category: "Education" })),
-    ...experience.map((item) => ({ ...item, category: "Experience" }))
+    ...education,
+    ...experience
   ].sort((a, b) => Number(b.sortYear) - Number(a.sortYear));
 
   timeline.innerHTML = merged.map((item) => `

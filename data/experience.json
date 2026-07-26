@@ -2,6 +2,7 @@
   {
     "title": "Senior AI Research Scientist",
     "organization": "Applied Intelligence Lab",
+    "category": "Experience",
     "period": "2023 – Present",
     "sortYear": "2026",
     "summary": "Leading a multidisciplinary team delivering robust and interpretable AI systems for public and private sector decision platforms.",
@@ -13,6 +14,7 @@
   {
     "title": "Machine Learning Research Engineer",
     "organization": "Data Systems Innovation Group",
+    "category": "Experience",
     "period": "2020 – 2023",
     "sortYear": "2023",
     "summary": "Architected deep learning pipelines for multimodal analytics and model monitoring in production-grade environments.",
@@ -22,10 +24,22 @@
     ]
   },
   {
-    "title": "Research Excellence Award",
-    "organization": "International AI Systems Forum",
+    "title": "Visiting Research Fellow",
+    "organization": "Center for Responsible Machine Intelligence",
+    "category": "Research",
     "period": "2022",
     "sortYear": "2022",
+    "summary": "Led collaborative research on model robustness benchmarks for public-impact AI systems.",
+    "highlights": [
+      "Published interdisciplinary benchmark protocol across three partner labs"
+    ]
+  },
+  {
+    "title": "Research Excellence Award",
+    "organization": "International AI Systems Forum",
+    "category": "Awards",
+    "period": "2021",
+    "sortYear": "2021",
     "summary": "Recognized for contributions to transparent and fair machine learning systems.",
     "highlights": [
       "Awarded for research translation into deployable systems"
