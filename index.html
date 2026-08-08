@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fatma Ahsan | Portfolio</title>
+
+    <title>Fatma Ahsan | Computer Science Researcher</title>
+
     <meta
       name="description"
-      content="Professional academic portfolio website for Fatma Ahsan: research, publications, projects, experience, and contact."
+      content="Academic portfolio of Fatma Ahsan, Computer Science researcher specializing in cybersecurity, software security testing, machine learning, computational intelligence, and metaheuristic optimization."
     />
+
     <style>
       :root {
         --color-primary: #0a66c2;
@@ -18,15 +21,19 @@
         --color-text: #0f172a;
         --color-muted: #475569;
         --color-border: #e2e8f0;
+
         --color-hero-glow-1: rgb(10 102 194 / 0.22);
         --color-hero-glow-2: rgb(56 189 248 / 0.22);
+
         --shadow-sm: 0 1px 2px rgb(2 6 23 / 0.08);
         --shadow-md: 0 8px 24px rgb(2 6 23 / 0.12);
         --shadow-lg: 0 24px 48px rgb(2 6 23 / 0.18);
+
         --radius-sm: 0.5rem;
         --radius-md: 0.75rem;
         --radius-lg: 1rem;
         --radius-xl: 1.25rem;
+
         --space-2: 0.5rem;
         --space-3: 0.75rem;
         --space-4: 1rem;
@@ -35,6 +42,7 @@
         --space-8: 2rem;
         --space-10: 2.5rem;
         --space-12: 3rem;
+
         --transition-fast: 150ms ease;
         --transition-med: 250ms ease;
       }
@@ -45,8 +53,10 @@
         --color-text: #e2e8f0;
         --color-muted: #94a3b8;
         --color-border: #1e293b;
+
         --color-hero-glow-1: rgb(10 102 194 / 0.3);
         --color-hero-glow-2: rgb(56 189 248 / 0.28);
+
         --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.45);
         --shadow-md: 0 12px 30px rgb(0 0 0 / 0.5);
         --shadow-lg: 0 32px 60px rgb(0 0 0 / 0.65);
@@ -65,7 +75,11 @@
         font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
         color: var(--color-text);
         background: var(--color-bg);
-        line-height: 1.5;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
       }
 
       .skip-link {
@@ -88,6 +102,10 @@
         border-radius: var(--radius-sm);
         z-index: 10000;
       }
+
+      /* =========================
+         HEADER
+      ========================= */
 
       .site-header {
         position: sticky;
@@ -116,6 +134,7 @@
         color: var(--color-text);
         font-weight: 700;
         letter-spacing: 0.02em;
+        white-space: nowrap;
       }
 
       .brand__mark {
@@ -124,7 +143,11 @@
         border-radius: 999px;
         display: grid;
         place-items: center;
-        background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          var(--color-accent)
+        );
         color: #fff;
         box-shadow: var(--shadow-sm);
       }
@@ -139,12 +162,19 @@
         min-width: 2.5rem;
         padding: 0 var(--space-3);
         cursor: pointer;
-        transition: background var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+        transition:
+          background var(--transition-fast),
+          border-color var(--transition-fast),
+          color var(--transition-fast);
       }
 
       .menu-toggle:hover,
       .theme-toggle:hover {
-        border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+        border-color: color-mix(
+          in srgb,
+          var(--color-primary) 35%,
+          var(--color-border)
+        );
       }
 
       .menu-toggle {
@@ -172,23 +202,37 @@
         text-decoration: none;
         color: var(--color-muted);
         font-weight: 600;
-        font-size: 0.95rem;
-        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
+        padding: 0.5rem 0.65rem;
         border-radius: var(--radius-sm);
-        transition: color var(--transition-fast), background var(--transition-fast);
+        transition:
+          color var(--transition-fast),
+          background var(--transition-fast);
       }
 
       .nav-link:hover,
       .nav-link:focus-visible {
         color: var(--color-primary);
-        background: color-mix(in srgb, var(--color-primary) 12%, transparent);
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 12%,
+          transparent
+        );
         outline: none;
       }
 
       .nav-link.active {
         color: var(--color-primary);
-        background: color-mix(in srgb, var(--color-primary) 18%, transparent);
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 18%,
+          transparent
+        );
       }
+
+      /* =========================
+         MAIN
+      ========================= */
 
       main {
         max-width: 1200px;
@@ -198,16 +242,34 @@
 
       section {
         min-height: 52vh;
-        padding: var(--space-8) 0;
+        padding: var(--space-10) 0;
         border-bottom: 1px solid var(--color-border);
+        scroll-margin-top: 5rem;
       }
+
+      section:last-child {
+        border-bottom: none;
+      }
+
+      /* =========================
+         HERO
+      ========================= */
 
       .hero {
         position: relative;
         overflow: hidden;
         border: 1px solid var(--color-border);
-        background: radial-gradient(circle at 12% 20%, var(--color-hero-glow-1), transparent 36%),
-          radial-gradient(circle at 88% 28%, var(--color-hero-glow-2), transparent 36%),
+        background:
+          radial-gradient(
+            circle at 12% 20%,
+            var(--color-hero-glow-1),
+            transparent 36%
+          ),
+          radial-gradient(
+            circle at 88% 28%,
+            var(--color-hero-glow-2),
+            transparent 36%
+          ),
           var(--color-surface);
         border-radius: var(--radius-xl);
         box-shadow: var(--shadow-lg);
@@ -230,7 +292,11 @@
         height: 20rem;
         top: -7rem;
         right: -6rem;
-        background: radial-gradient(circle at center, rgb(56 189 248 / 0.22), transparent 65%);
+        background: radial-gradient(
+          circle at center,
+          rgb(56 189 248 / 0.22),
+          transparent 65%
+        );
         animation: floatOrbOne 9s ease-in-out infinite;
       }
 
@@ -239,7 +305,11 @@
         height: 16rem;
         left: -5rem;
         bottom: -6rem;
-        background: radial-gradient(circle at center, rgb(10 102 194 / 0.24), transparent 65%);
+        background: radial-gradient(
+          circle at center,
+          rgb(10 102 194 / 0.24),
+          transparent 65%
+        );
         animation: floatOrbTwo 10s ease-in-out infinite;
       }
 
@@ -258,30 +328,43 @@
         font-weight: 700;
         letter-spacing: 0.04em;
         text-transform: uppercase;
-        font-size: 0.82rem;
+        font-size: 0.8rem;
       }
 
       .hero h1 {
         margin: 0;
         color: var(--color-secondary);
-        font-size: clamp(2rem, 4.4vw, 3.45rem);
-        line-height: 1.15;
+        font-size: clamp(2.4rem, 5vw, 4.2rem);
+        line-height: 1.1;
       }
 
       [data-theme="dark"] .hero h1 {
         color: #e2e8f0;
       }
 
+      .hero__subtitle {
+        margin: var(--space-3) 0 var(--space-4);
+        font-size: clamp(1.1rem, 2vw, 1.45rem);
+        font-weight: 700;
+        color: var(--color-text);
+      }
+
+      .hero__location {
+        color: var(--color-muted);
+        margin-bottom: var(--space-5);
+      }
+
       .hero__title {
-        margin: var(--space-3) 0 var(--space-5);
-        font-size: clamp(1.05rem, 2vw, 1.4rem);
+        margin: 0 0 var(--space-5);
+        font-size: clamp(1rem, 2vw, 1.25rem);
         font-weight: 700;
         color: var(--color-text);
       }
 
       .typing {
         color: var(--color-primary);
-        border-right: 2px solid color-mix(in srgb, var(--color-primary) 75%, transparent);
+        border-right: 2px solid
+          color-mix(in srgb, var(--color-primary) 75%, transparent);
         padding-right: 0.25rem;
         white-space: nowrap;
       }
@@ -289,7 +372,8 @@
       .hero__intro {
         margin: 0 0 var(--space-6);
         color: var(--color-muted);
-        max-width: 62ch;
+        max-width: 65ch;
+        font-size: 1.03rem;
       }
 
       .hero__actions {
@@ -305,11 +389,17 @@
         padding: 0.68rem 1.05rem;
         font-weight: 700;
         text-decoration: none;
-        transition: transform var(--transition-med), box-shadow var(--transition-med), background var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+        transition:
+          transform var(--transition-med),
+          box-shadow var(--transition-med),
+          background var(--transition-fast),
+          color var(--transition-fast),
+          border-color var(--transition-fast);
       }
 
       .btn:focus-visible {
-        outline: 3px solid color-mix(in srgb, var(--color-accent) 55%, transparent);
+        outline: 3px solid
+          color-mix(in srgb, var(--color-accent) 55%, transparent);
         outline-offset: 2px;
       }
 
@@ -318,13 +408,13 @@
       }
 
       .btn--primary {
-        background: linear-gradient(135deg, var(--color-primary), #0b74dd);
+        background: linear-gradient(
+          135deg,
+          var(--color-primary),
+          #0b74dd
+        );
         color: #fff;
         box-shadow: var(--shadow-md);
-      }
-
-      .btn--primary:hover {
-        box-shadow: 0 14px 30px rgb(10 102 194 / 0.28);
       }
 
       .btn--secondary {
@@ -334,8 +424,16 @@
       }
 
       .btn--secondary:hover {
-        border-color: color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
-        background: color-mix(in srgb, var(--color-primary) 8%, var(--color-surface));
+        border-color: color-mix(
+          in srgb,
+          var(--color-primary) 35%,
+          var(--color-border)
+        );
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 8%,
+          var(--color-surface)
+        );
       }
 
       .hero__socials {
@@ -356,14 +454,26 @@
         border: 1px solid var(--color-border);
         background: var(--color-surface);
         color: var(--color-text);
-        transition: transform var(--transition-med), color var(--transition-fast), border-color var(--transition-fast), background var(--transition-fast);
+        transition:
+          transform var(--transition-med),
+          color var(--transition-fast),
+          border-color var(--transition-fast),
+          background var(--transition-fast);
       }
 
       .social-link:hover,
       .social-link:focus-visible {
         color: var(--color-primary);
-        border-color: color-mix(in srgb, var(--color-primary) 45%, var(--color-border));
-        background: color-mix(in srgb, var(--color-primary) 10%, var(--color-surface));
+        border-color: color-mix(
+          in srgb,
+          var(--color-primary) 45%,
+          var(--color-border)
+        );
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 10%,
+          var(--color-surface)
+        );
         transform: translateY(-2px);
         outline: none;
       }
@@ -378,7 +488,12 @@
         aspect-ratio: 1;
         border-radius: 1.5rem;
         border: 1px solid var(--color-border);
-        background: linear-gradient(145deg, color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)), color-mix(in srgb, var(--color-accent) 12%, var(--color-surface)));
+        background:
+          linear-gradient(
+            145deg,
+            color-mix(in srgb, var(--color-primary) 12%, var(--color-surface)),
+            color-mix(in srgb, var(--color-accent) 12%, var(--color-surface))
+          );
         display: grid;
         place-items: center;
         box-shadow: var(--shadow-lg);
@@ -392,7 +507,12 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(120deg, transparent 20%, rgb(255 255 255 / 0.35) 45%, transparent 70%);
+        background: linear-gradient(
+          120deg,
+          transparent 20%,
+          rgb(255 255 255 / 0.35) 45%,
+          transparent 70%
+        );
         transform: translateX(-120%);
         animation: shimmer 5.5s ease-in-out infinite;
       }
@@ -411,39 +531,497 @@
         color: var(--color-muted);
       }
 
+      /* =========================
+         SECTIONS
+      ========================= */
+
+      .section-card {
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+        box-shadow: var(--shadow-sm);
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+      }
+
+      .section-heading {
+        margin-bottom: var(--space-8);
+      }
+
+      .section-label {
+        margin: 0 0 var(--space-2);
+        color: var(--color-primary);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+
       h2 {
+        margin: 0 0 var(--space-3);
         color: var(--color-secondary);
+        font-size: clamp(1.8rem, 3vw, 2.5rem);
+        line-height: 1.2;
       }
 
       [data-theme="dark"] h2 {
         color: #e2e8f0;
       }
 
-      .section-card {
-        background: var(--color-surface);
+      h3 {
+        color: var(--color-secondary);
+        margin-top: 0;
+        line-height: 1.3;
+      }
+
+      [data-theme="dark"] h3 {
+        color: #e2e8f0;
+      }
+
+      p {
+        color: var(--color-muted);
+      }
+
+      .lead {
+        font-size: 1.05rem;
+        max-width: 78ch;
+      }
+
+      /* =========================
+         ABOUT
+      ========================= */
+
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1.4fr 0.8fr;
+        gap: var(--space-8);
+      }
+
+      .interest-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+        margin-top: var(--space-5);
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.45rem 0.75rem;
+        border-radius: 999px;
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 9%,
+          var(--color-surface)
+        );
+        border: 1px solid color-mix(
+          in srgb,
+          var(--color-primary) 20%,
+          var(--color-border)
+        );
+        color: var(--color-primary);
+        font-size: 0.88rem;
+        font-weight: 650;
+      }
+
+      /* =========================
+         RESEARCH / PROJECT CARDS
+      ========================= */
+
+      .card-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+      }
+
+      .research-card,
+      .project-card,
+      .award-card,
+      .conference-card,
+      .skill-card {
+        border: 1px solid var(--color-border);
+        background: color-mix(
+          in srgb,
+          var(--color-surface) 96%,
+          var(--color-primary)
+        );
+        border-radius: var(--radius-md);
+        padding: var(--space-5);
+        transition:
+          transform var(--transition-med),
+          box-shadow var(--transition-med),
+          border-color var(--transition-fast);
+      }
+
+      .research-card:hover,
+      .project-card:hover,
+      .award-card:hover,
+      .conference-card:hover,
+      .skill-card:hover {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-md);
+        border-color: color-mix(
+          in srgb,
+          var(--color-primary) 30%,
+          var(--color-border)
+        );
+      }
+
+      .card-icon {
+        font-size: 1.6rem;
+        margin-bottom: var(--space-3);
+      }
+
+      .research-card h3,
+      .project-card h3,
+      .award-card h3,
+      .conference-card h3,
+      .skill-card h3 {
+        margin-bottom: var(--space-2);
+      }
+
+      .research-card p,
+      .project-card p,
+      .award-card p,
+      .conference-card p,
+      .skill-card p {
+        margin-bottom: 0;
+      }
+
+      /* =========================
+         PUBLICATIONS
+      ========================= */
+
+      .publication-group {
+        margin-bottom: var(--space-8);
+      }
+
+      .publication-group:last-child {
+        margin-bottom: 0;
+      }
+
+      .publication {
+        border-left: 4px solid var(--color-primary);
+        padding: var(--space-4) var(--space-5);
+        margin-bottom: var(--space-4);
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 5%,
+          var(--color-surface)
+        );
+        border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      }
+
+      .publication:last-child {
+        margin-bottom: 0;
+      }
+
+      .publication-title {
+        font-weight: 750;
+        color: var(--color-text);
+        margin-bottom: var(--space-2);
+      }
+
+      .publication-meta {
+        color: var(--color-muted);
+        font-size: 0.95rem;
+      }
+
+      .doi {
+        display: inline-block;
+        margin-top: var(--space-2);
+        color: var(--color-primary);
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .doi:hover {
+        text-decoration: underline;
+      }
+
+      .submitted {
+        border-left-color: var(--color-accent);
+      }
+
+      /* =========================
+         EXPERIENCE
+      ========================= */
+
+      .timeline {
+        position: relative;
+        padding-left: 1.6rem;
+        border-left: 2px solid var(--color-border);
+      }
+
+      .timeline-item {
+        position: relative;
+        margin-bottom: var(--space-8);
+      }
+
+      .timeline-item:last-child {
+        margin-bottom: 0;
+      }
+
+      .timeline-item::before {
+        content: "";
+        position: absolute;
+        width: 0.75rem;
+        height: 0.75rem;
+        border-radius: 999px;
+        background: var(--color-primary);
+        left: -2rem;
+        top: 0.35rem;
+        box-shadow: 0 0 0 5px
+          color-mix(in srgb, var(--color-primary) 12%, transparent);
+      }
+
+      .timeline-date {
+        color: var(--color-primary);
+        font-weight: 750;
+        font-size: 0.9rem;
+      }
+
+      .timeline-title {
+        margin: 0.25rem 0;
+        font-size: 1.15rem;
+      }
+
+      .timeline-organization {
+        color: var(--color-muted);
+        font-weight: 600;
+      }
+
+      .timeline ul {
+        margin-top: var(--space-3);
+        padding-left: 1.2rem;
+        color: var(--color-muted);
+      }
+
+      .timeline li {
+        margin-bottom: 0.4rem;
+      }
+
+      /* =========================
+         EDUCATION
+      ========================= */
+
+      .education-list {
+        display: grid;
+        gap: var(--space-5);
+      }
+
+      .education-item {
+        display: grid;
+        grid-template-columns: 110px 1fr;
+        gap: var(--space-5);
+        padding: var(--space-5);
         border: 1px solid var(--color-border);
         border-radius: var(--radius-md);
-        box-shadow: var(--shadow-sm);
-        padding: var(--space-6);
+        background: var(--color-surface);
       }
+
+      .education-year {
+        color: var(--color-primary);
+        font-weight: 800;
+      }
+
+      .education-degree {
+        font-weight: 800;
+        color: var(--color-text);
+        margin: 0 0 0.25rem;
+      }
+
+      .education-institution {
+        color: var(--color-muted);
+        font-weight: 600;
+      }
+
+      .education-detail {
+        color: var(--color-muted);
+        margin-top: 0.4rem;
+      }
+
+      /* =========================
+         SKILLS
+      ========================= */
+
+      .skill-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+      }
+
+      .skill-card h3 {
+        font-size: 1rem;
+      }
+
+      .skill-card p {
+        font-size: 0.95rem;
+      }
+
+      /* =========================
+         AWARDS
+      ========================= */
+
+      .award-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+      }
+
+      .award-card h3 {
+        font-size: 1.05rem;
+      }
+
+      /* =========================
+         CONFERENCES
+      ========================= */
+
+      .conference-list {
+        display: grid;
+        gap: var(--space-4);
+      }
+
+      .conference-card {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+        gap: var(--space-4);
+      }
+
+      .conference-year {
+        font-weight: 800;
+        color: var(--color-primary);
+      }
+
+      /* =========================
+         CONTACT
+      ========================= */
+
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-8);
+      }
+
+      .contact-details {
+        display: grid;
+        gap: var(--space-4);
+        margin-top: var(--space-6);
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: var(--space-3);
+      }
+
+      .contact-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        flex-shrink: 0;
+        display: grid;
+        place-items: center;
+        border-radius: var(--radius-sm);
+        background: color-mix(
+          in srgb,
+          var(--color-primary) 10%,
+          var(--color-surface)
+        );
+        color: var(--color-primary);
+      }
+
+      .contact-item strong {
+        display: block;
+        color: var(--color-text);
+      }
+
+      .contact-item a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+
+      .contact-item a:hover {
+        text-decoration: underline;
+      }
+
+      .profile-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-3);
+        margin-top: var(--space-5);
+      }
+
+      .profile-link {
+        padding: 0.6rem 0.9rem;
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        text-decoration: none;
+        color: var(--color-text);
+        font-weight: 650;
+        transition:
+          transform var(--transition-fast),
+          border-color var(--transition-fast),
+          color var(--transition-fast);
+      }
+
+      .profile-link:hover {
+        transform: translateY(-2px);
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+      }
+
+      /* =========================
+         FOOTER
+      ========================= */
+
+      footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: var(--space-8) var(--space-4);
+        color: var(--color-muted);
+        text-align: center;
+        font-size: 0.9rem;
+      }
+
+      /* =========================
+         ANIMATIONS
+      ========================= */
 
       @keyframes floatOrbOne {
         0%,
-        100% { transform: translate(0, 0); }
-        50% { transform: translate(-14px, 10px); }
+        100% {
+          transform: translate(0, 0);
+        }
+
+        50% {
+          transform: translate(-14px, 10px);
+        }
       }
 
       @keyframes floatOrbTwo {
         0%,
-        100% { transform: translate(0, 0); }
-        50% { transform: translate(12px, -10px); }
+        100% {
+          transform: translate(0, 0);
+        }
+
+        50% {
+          transform: translate(12px, -10px);
+        }
       }
 
       @keyframes shimmer {
-        0% { transform: translateX(-120%); }
+        0% {
+          transform: translateX(-120%);
+        }
+
         40%,
-        100% { transform: translateX(120%); }
+        100% {
+          transform: translateX(120%);
+        }
       }
+
+      /* =========================
+         RESPONSIVE
+      ========================= */
 
       @media (max-width: 1080px) {
         .hero__grid {
@@ -457,6 +1035,11 @@
 
         .photo-placeholder {
           width: min(300px, 80vw);
+        }
+
+        .about-grid,
+        .contact-grid {
+          grid-template-columns: 1fr;
         }
       }
 
@@ -496,11 +1079,37 @@
           display: block;
           padding: var(--space-3) var(--space-4);
         }
+
+        .theme-toggle {
+          width: 100%;
+        }
+      }
+
+      @media (max-width: 760px) {
+        .card-grid,
+        .skill-grid,
+        .award-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .education-item {
+          grid-template-columns: 1fr;
+          gap: var(--space-2);
+        }
+
+        .conference-card {
+          grid-template-columns: 1fr;
+          gap: var(--space-2);
+        }
       }
 
       @media (max-width: 640px) {
         main {
           padding: var(--space-6) var(--space-3);
+        }
+
+        section {
+          padding: var(--space-8) 0;
         }
 
         .hero {
@@ -511,12 +1120,28 @@
           display: grid;
           grid-template-columns: 1fr;
         }
+
+        .btn {
+          text-align: center;
+        }
+
+        .hero__intro {
+          font-size: 0.98rem;
+        }
+
+        .photo-placeholder {
+          width: min(260px, 75vw);
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
+        html {
+          scroll-behavior: auto;
+        }
 
-        * {
+        *,
+        *::before,
+        *::after {
           animation-duration: 0.01ms !important;
           animation-iteration-count: 1 !important;
           transition-duration: 0.01ms !important;
@@ -524,12 +1149,24 @@
       }
     </style>
   </head>
+
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">
+      Skip to main content
+    </a>
+
+    <!-- =========================
+         HEADER
+    ========================== -->
 
     <header class="site-header" id="top">
       <div class="nav-shell">
-        <a class="brand" href="#home" aria-label="Go to Home section">
+
+        <a
+          class="brand"
+          href="#home"
+          aria-label="Go to Home section"
+        >
           <span class="brand__mark" aria-hidden="true">F</span>
           <span>Fatma Ahsan</span>
         </a>
@@ -546,176 +1183,1979 @@
         </button>
 
         <nav class="nav-wrap" aria-label="Primary">
+
           <ul class="nav-list" id="primaryNavigation">
-            <li><a class="nav-link" href="#home">Home</a></li>
-            <li><a class="nav-link" href="#about">About</a></li>
-            <li><a class="nav-link" href="#research">Research</a></li>
-            <li><a class="nav-link" href="#publications">Publications</a></li>
-            <li><a class="nav-link" href="#projects">Projects</a></li>
-            <li><a class="nav-link" href="#experience">Experience</a></li>
-            <li><a class="nav-link" href="#education">Education</a></li>
-            <li><a class="nav-link" href="#skills">Skills</a></li>
-            <li><a class="nav-link" href="#contact">Contact</a></li>
+            <li>
+              <a class="nav-link" href="#home">Home</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#about">About</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#research">Research</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#publications">
+                Publications
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#experience">
+                Experience
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#education">
+                Education
+              </a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#awards">Awards</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+
+            <li>
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
           </ul>
 
-          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
             🌙
           </button>
+
         </nav>
       </div>
     </header>
 
     <main id="main-content">
-      <section class="hero" id="home" aria-labelledby="home-title">
+
+      <!-- =========================
+           HOME
+      ========================== -->
+
+      <section
+        class="hero"
+        id="home"
+        aria-labelledby="home-title"
+      >
+
         <div class="hero__grid">
+
           <div>
-            <p class="hero__eyebrow">AI • Machine Learning • Cybersecurity • Software Engineering</p>
-            <h1 id="home-title">Fatma Ahsan</h1>
+
+            <p class="hero__eyebrow">
+              Cybersecurity • AI • Machine Learning • Software Engineering
+            </p>
+
+            <h1 id="home-title">
+              Fatma Ahsan
+            </h1>
+
+            <p class="hero__subtitle">
+              Computer Science Researcher
+            </p>
+
+            <p class="hero__location">
+              Abu Dhabi, UAE
+            </p>
+
             <p class="hero__title">
-              Research Focus: <span class="typing" id="typingText" aria-live="polite"></span>
+              Research Focus:
+              <span
+                class="typing"
+                id="typingText"
+                aria-live="polite"
+              ></span>
             </p>
+
             <p class="hero__intro">
-              I am a researcher building intelligent, secure, and production-ready systems at the intersection of AI,
-              machine learning, cybersecurity, and software engineering. My work combines rigorous scientific inquiry with
-              practical implementation to create trustworthy, scalable technologies for real-world impact.
+              I am a Computer Science researcher specializing in
+              cybersecurity, software security testing, machine learning,
+              computational intelligence, and metaheuristic optimization.
+              My doctoral research focused on developing hybrid
+              optimization algorithms for automated software security
+              testing.
             </p>
 
-            <div class="hero__actions" role="group" aria-label="Primary actions">
-              <a class="btn btn--primary" href="#" aria-label="Download curriculum vitae (placeholder link)">Download CV</a>
-              <a class="btn btn--secondary" href="#research">View Research</a>
-              <a class="btn btn--secondary" href="#projects">View Projects</a>
-              <a class="btn btn--secondary" href="#contact">Contact Me</a>
+            <p class="hero__intro">
+              My current research interests include machine learning,
+              trustworthy and explainable AI, reinforcement learning,
+              large language models, generative AI, and intelligent
+              human-AI systems.
+            </p>
+
+            <div
+              class="hero__actions"
+              role="group"
+              aria-label="Primary actions"
+            >
+
+              <!-- Replace # with your actual CV file -->
+              <a
+                class="btn btn--primary"
+                href="#"
+                aria-label="Download curriculum vitae"
+              >
+                Download CV
+              </a>
+
+              <a
+                class="btn btn--secondary"
+                href="#research"
+              >
+                View Research
+              </a>
+
+              <a
+                class="btn btn--secondary"
+                href="#publications"
+              >
+                View Publications
+              </a>
+
+              <a
+                class="btn btn--secondary"
+                href="#contact"
+              >
+                Contact Me
+              </a>
+
             </div>
 
-            <div class="hero__socials" aria-label="Social links">
-              <a class="social-link" href="#" aria-label="LinkedIn profile (placeholder)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.94 8.5H3.56V20h3.38V8.5zM5.25 3A2.03 2.03 0 1 0 5.3 7.06 2.03 2.03 0 0 0 5.25 3zm15.19 9.85c0-3.42-1.82-5.01-4.25-5.01a3.67 3.67 0 0 0-3.3 1.82V8.5H9.5V20h3.39v-6.39c0-1.68.32-3.3 2.4-3.3 2.05 0 2.08 1.92 2.08 3.4V20h3.38z"/></svg>
+            <div
+              class="hero__socials"
+              aria-label="Academic and professional profiles"
+            >
+
+              <!-- Replace # with your real LinkedIn URL -->
+              <a
+                class="social-link"
+                href="#"
+                aria-label="LinkedIn profile"
+                title="LinkedIn"
+              >
+                in
               </a>
-              <a class="social-link" href="#" aria-label="GitHub profile (placeholder)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.82-.26.82-.58v-2.18c-3.34.73-4.04-1.6-4.04-1.6a3.18 3.18 0 0 0-1.33-1.76c-1.08-.75.08-.73.08-.73a2.5 2.5 0 0 1 1.83 1.23 2.54 2.54 0 0 0 3.47.99 2.55 2.55 0 0 1 .76-1.6c-2.67-.3-5.47-1.34-5.47-5.95a4.65 4.65 0 0 1 1.24-3.24 4.32 4.32 0 0 1 .12-3.2s1.01-.32 3.3 1.24a11.35 11.35 0 0 1 6 0c2.28-1.56 3.29-1.24 3.29-1.24.44 1.02.48 2.22.12 3.26a4.64 4.64 0 0 1 1.23 3.23c0 4.62-2.8 5.64-5.48 5.94a2.87 2.87 0 0 1 .82 2.23v3.3c0 .32.21.7.83.58A12 12 0 0 0 12 .5z"/></svg>
+
+              <!-- Replace # with your real GitHub URL -->
+              <a
+                class="social-link"
+                href="#"
+                aria-label="GitHub profile"
+                title="GitHub"
+              >
+                GH
               </a>
-              <a class="social-link" href="#" aria-label="Google Scholar profile (placeholder)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 1 9l11 6 9-4.9V17h2V9L12 3zm0 14-7-3.82V17l7 4 7-4v-3.82L12 17z"/></svg>
+
+              <!-- Replace # with your Google Scholar URL -->
+              <a
+                class="social-link"
+                href="#"
+                aria-label="Google Scholar profile"
+                title="Google Scholar"
+              >
+                GS
               </a>
-              <a class="social-link" href="#contact" aria-label="Contact section">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v.4l-10 6.25L2 5.4V5zm0 3.15V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8.15l-9.47 5.92a1 1 0 0 1-1.06 0L2 8.15z"/></svg>
+
+              <a
+                class="social-link"
+                href="mailto:fatimah.ahsan01@gmail.com"
+                aria-label="Send email"
+                title="Email"
+              >
+                @
               </a>
+
             </div>
+
           </div>
 
-          <div class="hero__visual" aria-hidden="true">
+          <div class="hero__visual">
+            <!--
+              Replace this entire div with your photograph later.
+
+              Example:
+              <img
+                src="assets/fatma-ahsan.jpg"
+                alt="Fatma Ahsan"
+                class="profile-photo"
+              >
+            -->
+
             <div class="photo-placeholder">
               <div>
                 <strong>Professional Photo</strong>
-                <p>Place your portrait image here</p>
+                <p>
+                  Your professional photograph will appear here.
+                </p>
               </div>
             </div>
+
           </div>
+
         </div>
       </section>
 
-      <section id="about" aria-labelledby="about-title"><div class="section-card"><h2 id="about-title">About</h2></div></section>
-      <section id="research" aria-labelledby="research-title"><div class="section-card"><h2 id="research-title">Research</h2></div></section>
-      <section id="publications" aria-labelledby="publications-title"><div class="section-card"><h2 id="publications-title">Publications</h2></div></section>
-      <section id="projects" aria-labelledby="projects-title"><div class="section-card"><h2 id="projects-title">Projects</h2></div></section>
-      <section id="experience" aria-labelledby="experience-title"><div class="section-card"><h2 id="experience-title">Experience</h2></div></section>
-      <section id="education" aria-labelledby="education-title"><div class="section-card"><h2 id="education-title">Education</h2></div></section>
-      <section id="skills" aria-labelledby="skills-title"><div class="section-card"><h2 id="skills-title">Skills</h2></div></section>
-      <section id="contact" aria-labelledby="contact-title"><div class="section-card"><h2 id="contact-title">Contact</h2></div></section>
+
+      <!-- =========================
+           ABOUT
+      ========================== -->
+
+      <section
+        id="about"
+        aria-labelledby="about-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Profile</p>
+
+            <h2 id="about-title">
+              About Me
+            </h2>
+          </div>
+
+          <div class="about-grid">
+
+            <div>
+
+              <p class="lead">
+                I am a Computer Science researcher with a background in
+                cybersecurity, software engineering, machine learning,
+                computational intelligence, and metaheuristic
+                optimization.
+              </p>
+
+              <p>
+                I completed my Ph.D. in Computer Science at
+                <strong>Aligarh Muslim University</strong>, with doctoral
+                research focused on hybrid metaheuristic algorithms for
+                automated software security testing.
+              </p>
+
+              <p>
+                My doctoral research investigated search-based approaches
+                for improving software testing effectiveness, including
+                code coverage and path coverage, and resulted in
+                peer-reviewed publications in software engineering,
+                cybersecurity, and computational intelligence.
+              </p>
+
+              <p>
+                My current research interests have expanded toward
+                broader applications of artificial intelligence and
+                intelligent computational methods. I am particularly
+                interested in machine learning, natural language
+                processing, reinforcement learning, generative AI,
+                large language models, explainable AI, trustworthy AI,
+                and intelligent human-AI systems.
+              </p>
+
+              <p>
+                I enjoy exploring innovative ideas and applying
+                computational techniques to challenging real-world
+                problems. I am interested in research collaborations,
+                postdoctoral opportunities, and interdisciplinary
+                research involving AI, cybersecurity, software
+                engineering, and computational intelligence.
+              </p>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Research Interests
+              </h3>
+
+              <div class="interest-list">
+
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Artificial Intelligence</span>
+                <span class="tag">Cybersecurity</span>
+                <span class="tag">Software Security Testing</span>
+                <span class="tag">Computational Intelligence</span>
+                <span class="tag">Metaheuristic Optimization</span>
+                <span class="tag">Search-Based Software Engineering</span>
+                <span class="tag">Natural Language Processing</span>
+                <span class="tag">Reinforcement Learning</span>
+                <span class="tag">Generative AI</span>
+                <span class="tag">Large Language Models</span>
+                <span class="tag">Explainable AI</span>
+                <span class="tag">Trustworthy AI</span>
+                <span class="tag">Human-AI Systems</span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           RESEARCH
+      ========================== -->
+
+      <section
+        id="research"
+        aria-labelledby="research-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Research</p>
+
+            <h2 id="research-title">
+              Research Areas
+            </h2>
+
+            <p class="lead">
+              My research lies at the intersection of cybersecurity,
+              software engineering, artificial intelligence, and
+              computational intelligence. I am interested in developing
+              intelligent optimization and learning-based approaches
+              to solve complex problems in software testing and security.
+            </p>
+          </div>
+
+          <div class="card-grid">
+
+            <article class="research-card">
+
+              <div class="card-icon">🔐</div>
+
+              <h3>
+                Software Security Testing
+              </h3>
+
+              <p>
+                Research on automated approaches for identifying
+                security vulnerabilities and improving the effectiveness
+                of software security testing.
+              </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+              <div class="card-icon">🧬</div>
+
+              <h3>
+                Metaheuristic Optimization
+              </h3>
+
+              <p>
+                Investigation of evolutionary and population-based
+                optimization techniques, including hybrid approaches,
+                for solving complex computational problems.
+              </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+              <div class="card-icon">⚙️</div>
+
+              <h3>
+                Search-Based Software Engineering
+              </h3>
+
+              <p>
+                Application of search and optimization techniques to
+                automate challenging software engineering tasks,
+                particularly automated testing and test-suite generation.
+              </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+              <div class="card-icon">🤖</div>
+
+              <h3>
+                Artificial Intelligence & Machine Learning
+              </h3>
+
+              <p>
+                Exploring machine learning and computational intelligence
+                approaches for developing intelligent, adaptive, and
+                data-driven systems.
+              </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+              <div class="card-icon">🧠</div>
+
+              <h3>
+                Trustworthy & Explainable AI
+              </h3>
+
+              <p>
+                Current interest in developing AI systems that are
+                interpretable, reliable, transparent, and trustworthy.
+              </p>
+
+            </article>
+
+
+            <article class="research-card">
+
+              <div class="card-icon">✨</div>
+
+              <h3>
+                Generative AI & LLMs
+              </h3>
+
+              <p>
+                Exploring large language models, generative AI, NLP,
+                reinforcement learning, and intelligent human-AI
+                interaction.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           PUBLICATIONS
+      ========================== -->
+
+      <section
+        id="publications"
+        aria-labelledby="publications-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Research Output</p>
+
+            <h2 id="publications-title">
+              Publications
+            </h2>
+
+            <p class="lead">
+              My research has resulted in peer-reviewed journal
+              articles, book chapters, and conference publications
+              covering software security testing, search-based software
+              engineering, computational intelligence, and metaheuristic
+              optimization.
+            </p>
+          </div>
+
+
+          <div class="publication-group">
+
+            <h3>
+              Journal Articles
+            </h3>
+
+
+            <article class="publication">
+
+              <div class="publication-title">
+                Ahsan, F., & Anwer, F. (2024).
+                A systematic literature review on software security
+                testing using metaheuristics.
+              </div>
+
+              <div class="publication-meta">
+                <em>Automated Software Engineering, 31, 44.</em>
+              </div>
+
+              <a
+                class="doi"
+                href="https://doi.org/10.1007/s10515-024-00433-0"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DOI: 10.1007/s10515-024-00433-0 →
+              </a>
+
+            </article>
+
+
+            <article class="publication">
+
+              <div class="publication-title">
+                Ahsan, F., & Anwer, F. (2024).
+                A novel approach for code coverage testing using
+                hybrid metaheuristic algorithm.
+              </div>
+
+              <div class="publication-meta">
+                <em>
+                  International Journal of Information Technology,
+                  16, 3691–3701.
+                </em>
+              </div>
+
+              <a
+                class="doi"
+                href="https://doi.org/10.1007/s41870-024-01968-x"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DOI: 10.1007/s41870-024-01968-x →
+              </a>
+
+            </article>
+
+          </div>
+
+
+          <div class="publication-group">
+
+            <h3>
+              Book Chapters
+            </h3>
+
+
+            <article class="publication">
+
+              <div class="publication-title">
+                Ahsan, F., & Anwer, F. (2023).
+                A Critical Review on Search-Based Security Testing
+                of Programs.
+              </div>
+
+              <div class="publication-meta">
+                In: Shukla, A., Murthy, B.K., Hasteer, N.,
+                Van Belle, J.P. (eds), <em>Computational Intelligence.</em>
+                Lecture Notes in Electrical Engineering, Vol. 968.
+                Springer, Singapore.
+              </div>
+
+              <a
+                class="doi"
+                href="https://doi.org/10.1007/978-981-19-7346-8_19"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DOI: 10.1007/978-981-19-7346-8_19 →
+              </a>
+
+            </article>
+
+          </div>
+
+
+          <div class="publication-group">
+
+            <h3>
+              Conference Publications
+            </h3>
+
+
+            <article class="publication">
+
+              <div class="publication-title">
+                Ahsan, F., & Anwer, F. (2025).
+                Hybrid GWO-PSO for Path Coverage Testing.
+              </div>
+
+              <div class="publication-meta">
+                In: Gonçalves, P.J.S., Singh, P.K., Tanwar, S.,
+                Epiphaniou, G. (eds), Proceedings of the Fifth
+                International Conference on Computing, Communications,
+                and Cyber-Security (IC4S 2023).
+                Lecture Notes in Networks and Systems, Vol. 1128.
+                Springer, Singapore.
+              </div>
+
+              <a
+                class="doi"
+                href="https://doi.org/10.1007/978-981-97-7371-8_16"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                DOI: 10.1007/978-981-97-7371-8_16 →
+              </a>
+
+            </article>
+
+          </div>
+
+
+          <div class="publication-group">
+
+            <h3>
+              Submitted Manuscript
+            </h3>
+
+
+            <article class="publication submitted">
+
+              <div class="publication-title">
+                EvoMaMTOSuite: A Multi-tasking Optimization Approach
+                to Generate a Test Suite for Fault Detection.
+              </div>
+
+              <div class="publication-meta">
+                Submitted to <em>Automated Software Engineering</em>
+                on 3 July 2026.
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           PROJECTS
+      ========================== -->
+
+      <section
+        id="projects"
+        aria-labelledby="projects-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Academic Work</p>
+
+            <h2 id="projects-title">
+              Projects
+            </h2>
+
+            <p class="lead">
+              Selected research and academic projects demonstrating
+              experience in software testing, optimization,
+              cybersecurity, programming, and intelligent information
+              systems.
+            </p>
+          </div>
+
+
+          <div class="card-grid">
+
+            <article class="project-card">
+
+              <div class="card-icon">🧪</div>
+
+              <h3>
+                EvoMaMTOSuite
+              </h3>
+
+              <p>
+                A multi-tasking optimization approach for automated
+                test-suite generation and fault detection. The project
+                explores optimization-based strategies for generating
+                effective software test suites.
+              </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+              <div class="card-icon">🔒</div>
+
+              <h3>
+                Software Security Testing
+              </h3>
+
+              <p>
+                Research project focused on applying hybrid
+                metaheuristic algorithms to automated software testing,
+                with emphasis on code coverage, path coverage, and
+                security testing.
+              </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+              <div class="card-icon">☕</div>
+
+              <h3>
+                EvoSuite Security Detection
+              </h3>
+
+              <p>
+                Worked with the EvoSuite project to investigate
+                automated test generation and security detection in
+                Java-based software projects.
+              </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+              <div class="card-icon">📄</div>
+
+              <h3>
+                Document Management System
+              </h3>
+
+              <p>
+                Developed a document management system using Java
+                programming.
+              </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+              <div class="card-icon">🔎</div>
+
+              <h3>
+                Intelligent Document Search
+              </h3>
+
+              <p>
+                Developed a Windows-based project using Elasticsearch
+                for efficient document searching and retrieval from
+                a database.
+              </p>
+
+            </article>
+
+
+            <article class="project-card">
+
+              <div class="card-icon">📚</div>
+
+              <h3>
+                Book Store Management System
+              </h3>
+
+              <p>
+                Developed a web-based Book Store Management System
+                using C#.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           EXPERIENCE
+      ========================== -->
+
+      <section
+        id="experience"
+        aria-labelledby="experience-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Academic Career</p>
+
+            <h2 id="experience-title">
+              Experience
+            </h2>
+          </div>
+
+
+          <div class="timeline">
+
+            <div class="timeline-item">
+
+              <div class="timeline-date">
+                Doctoral Research
+              </div>
+
+              <h3 class="timeline-title">
+                Doctoral Researcher
+              </h3>
+
+              <div class="timeline-organization">
+                Aligarh Muslim University
+              </div>
+
+              <ul>
+                <li>
+                  Developed hybrid metaheuristic algorithms for
+                  automated software security testing.
+                </li>
+
+                <li>
+                  Investigated approaches for improving code and
+                  path coverage using optimization techniques.
+                </li>
+
+                <li>
+                  Designed and evaluated search-based software
+                  testing frameworks.
+                </li>
+
+                <li>
+                  Conducted systematic literature reviews in
+                  software security testing and metaheuristic
+                  optimization.
+                </li>
+
+                <li>
+                  Published peer-reviewed research in journals,
+                  conferences, and book chapters.
+                </li>
+
+                <li>
+                  Served as corresponding author on a research
+                  publication.
+                </li>
+              </ul>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+              <div class="timeline-date">
+                January 2022 – December 2022
+              </div>
+
+              <h3 class="timeline-title">
+                Teaching Assistant — Cybersecurity Laboratory
+              </h3>
+
+              <div class="timeline-organization">
+                Department of Computer Science,
+                Aligarh Muslim University
+              </div>
+
+              <ul>
+
+                <li>
+                  Conducted practical laboratory sessions for
+                  M.Sc. Cybersecurity students.
+                </li>
+
+                <li>
+                  Guided students through cybersecurity concepts,
+                  hands-on exercises, and laboratory assignments.
+                </li>
+
+                <li>
+                  Assisted students with practical implementation
+                  of network security, ethical hacking, and
+                  cryptography.
+                </li>
+
+                <li>
+                  Evaluated laboratory exercises, assignments,
+                  and student performance.
+                </li>
+
+                <li>
+                  Provided technical support and mentoring during
+                  laboratory sessions.
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           EDUCATION
+      ========================== -->
+
+      <section
+        id="education"
+        aria-labelledby="education-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Academic Background</p>
+
+            <h2 id="education-title">
+              Education
+            </h2>
+          </div>
+
+
+          <div class="education-list">
+
+            <article class="education-item">
+
+              <div class="education-year">
+                Ph.D.
+              </div>
+
+              <div>
+
+                <p class="education-degree">
+                  Ph.D. in Computer Science
+                </p>
+
+                <div class="education-institution">
+                  Aligarh Muslim University (AMU)
+                </div>
+
+                <div class="education-detail">
+                  Specialization: Cybersecurity & Metaheuristic
+                  Optimization
+                  <br />
+                  Thesis:
+                  <em>
+                    Search Based Software Security Testing Using
+                    Metaheuristic Techniques
+                  </em>
+                  <br />
+                  Supervisor: Prof. Faisal Anwer
+                  <br />
+                  <strong>Ph.D. Awarded</strong>
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="education-item">
+
+              <div class="education-year">
+                2018
+              </div>
+
+              <div>
+
+                <p class="education-degree">
+                  Master of Computer Applications (MCA)
+                </p>
+
+                <div class="education-institution">
+                  Aligarh Muslim University (AMU)
+                </div>
+
+                <div class="education-detail">
+                  Percentage: 82.75%
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="education-item">
+
+              <div class="education-year">
+                2015
+              </div>
+
+              <div>
+
+                <p class="education-degree">
+                  B.Sc. in Computer Applications
+                </p>
+
+                <div class="education-institution">
+                  Aligarh Muslim University (AMU)
+                </div>
+
+                <div class="education-detail">
+                  Percentage: 73%
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="education-item">
+
+              <div class="education-year">
+                2011
+              </div>
+
+              <div>
+
+                <p class="education-degree">
+                  Intermediate — Science
+                </p>
+
+                <div class="education-institution">
+                  Bihar School Examination Board (BSEB)
+                </div>
+
+                <div class="education-detail">
+                  Percentage: 65%
+                </div>
+
+              </div>
+
+            </article>
+
+
+            <article class="education-item">
+
+              <div class="education-year">
+                2009
+              </div>
+
+              <div>
+
+                <p class="education-degree">
+                  Matriculation / Secondary School
+                </p>
+
+                <div class="education-institution">
+                  Bihar School Examination Board (BSEB)
+                </div>
+
+                <div class="education-detail">
+                  Percentage: 63%
+                </div>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           AWARDS
+      ========================== -->
+
+      <section
+        id="awards"
+        aria-labelledby="awards-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Recognition</p>
+
+            <h2 id="awards-title">
+              Awards & Fellowships
+            </h2>
+          </div>
+
+
+          <div class="award-grid">
+
+            <article class="award-card">
+
+              <div class="card-icon">🏆</div>
+
+              <h3>
+                Best Paper Award
+              </h3>
+
+              <p>
+                Awarded at the Second International Conference on
+                Advancements in Science, Technology and Management
+                (ICASTM-II), 2025.
+              </p>
+
+            </article>
+
+
+            <article class="award-card">
+
+              <div class="card-icon">🎓</div>
+
+              <h3>
+                UGC-NTA Junior Research Fellowship
+              </h3>
+
+              <p>
+                Qualified the UGC-NTA JRF examination in Computer
+                Science and Applications in June 2023.
+              </p>
+
+            </article>
+
+
+            <article class="award-card">
+
+              <div class="card-icon">🎓</div>
+
+              <h3>
+                Maulana Azad National Fellowship
+              </h3>
+
+              <p>
+                Awarded the MANF fellowship for pursuing doctoral
+                research in July 2019.
+              </p>
+
+            </article>
+
+
+            <article class="award-card">
+
+              <div class="card-icon">📜</div>
+
+              <h3>
+                UGC-NET
+              </h3>
+
+              <p>
+                Qualified UGC NET in Computer Science and
+                Applications in June 2019 and December 2019.
+              </p>
+
+            </article>
+
+
+            <article class="award-card">
+
+              <div class="card-icon">🏅</div>
+
+              <h3>
+                University Scholarship
+              </h3>
+
+              <p>
+                Awarded a university-level scholarship during the
+                MCA program based on departmental performance.
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           CONFERENCES
+      ========================== -->
+
+      <section
+        id="conferences"
+        aria-labelledby="conferences-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Academic Activities</p>
+
+            <h2 id="conferences-title">
+              Conferences & Presentations
+            </h2>
+          </div>
+
+
+          <div class="conference-list">
+
+            <article class="conference-card">
+
+              <div class="conference-year">
+                2025
+              </div>
+
+              <div>
+
+                <h3>
+                  The Academic Economist's Perspective on the Benefits
+                  and Risks of AI, Data Science, Blockchain, and
+                  Machine Learning
+                </h3>
+
+                <p>
+                  NYU Abu Dhabi, UAE
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="conference-card">
+
+              <div class="conference-year">
+                2025
+              </div>
+
+              <div>
+
+                <h3>
+                  Second International Conference on Advancements
+                  in Science, Technology and Management (ICASTM-II)
+                </h3>
+
+                <p>
+                  SXCMT, India
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="conference-card">
+
+              <div class="conference-year">
+                2024
+              </div>
+
+              <div>
+
+                <h3>
+                  Fifth International Conference on Computing,
+                  Communication and Cybersecurity (IC4S'05)
+                </h3>
+
+                <p>
+                  GEHU, India — Paper Presentation
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="conference-card">
+
+              <div class="conference-year">
+                2023
+              </div>
+
+              <div>
+
+                <h3>
+                  International Conference on Emerging Computational
+                  Intelligence (ICECI)
+                </h3>
+
+                <p>
+                  Aligarh Muslim University, India —
+                  Paper Presentation
+                </p>
+
+              </div>
+
+            </article>
+
+
+            <article class="conference-card">
+
+              <div class="conference-year">
+                2022
+              </div>
+
+              <div>
+
+                <h3>
+                  2nd International Conference on Information
+                  Technology (InCITe)
+                </h3>
+
+                <p>
+                  Theme: Computational Intelligence: Automate Your World
+                  <br />
+                  Amity University, India — Paper Presentation
+                </p>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           SKILLS
+      ========================== -->
+
+      <section
+        id="skills"
+        aria-labelledby="skills-title"
+      >
+
+        <div class="section-card">
+
+          <div class="section-heading">
+            <p class="section-label">Technical Expertise</p>
+
+            <h2 id="skills-title">
+              Skills
+            </h2>
+          </div>
+
+
+          <div class="skill-grid">
+
+            <article class="skill-card">
+
+              <h3>
+                Programming Languages
+              </h3>
+
+              <p>
+                Python (Advanced) · C/C++ · Java · MATLAB
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Machine Learning & Scientific Computing
+              </h3>
+
+              <p>
+                Scikit-learn · TensorFlow · PyTorch · NumPy ·
+                Pandas · SciPy · Matplotlib
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Artificial Intelligence
+              </h3>
+
+              <p>
+                Machine Learning · Computational Intelligence ·
+                Reinforcement Learning · Explainable AI ·
+                Large Language Models · Intelligent Software Systems
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Optimization
+              </h3>
+
+              <p>
+                Genetic Algorithms · Particle Swarm Optimization ·
+                Grey Wolf Optimization · Hybrid Metaheuristic
+                Algorithms · NSGA-II · Search-Based Software Engineering
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Cybersecurity & Software Engineering
+              </h3>
+
+              <p>
+                Software Security Testing · Automated Software
+                Testing · Vulnerability Detection · Search-Based
+                Software Engineering
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Web Programming
+              </h3>
+
+              <p>
+                HTML · DHTML · CSS · JavaScript
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Databases
+              </h3>
+
+              <p>
+                MySQL · SQL Server · Oracle
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Research Tools
+              </h3>
+
+              <p>
+                Git · GitHub · LaTeX · Mendeley ·
+                Jupyter Notebook · Google Colab
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Mathematical Skills
+              </h3>
+
+              <p>
+                Linear Algebra · Calculus · Discrete Mathematics ·
+                Probability · Optimization
+              </p>
+
+            </article>
+
+
+            <article class="skill-card">
+
+              <h3>
+                Professional Skills
+              </h3>
+
+              <p>
+                Research & Scientific Writing · Problem Solving ·
+                Critical Thinking · Communication · Teamwork ·
+                Mentoring · Leadership · Time Management
+              </p>
+
+            </article>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- =========================
+           CONTACT
+      ========================== -->
+
+      <section
+        id="contact"
+        aria-labelledby="contact-title"
+      >
+
+        <div class="section-card">
+
+          <div class="contact-grid">
+
+            <div>
+
+              <p class="section-label">
+                Get in Touch
+              </p>
+
+              <h2 id="contact-title">
+                Let's Connect
+              </h2>
+
+              <p class="lead">
+                I am interested in research collaborations,
+                postdoctoral opportunities, research positions,
+                and interdisciplinary projects in cybersecurity,
+                artificial intelligence, machine learning,
+                software engineering, and computational intelligence.
+              </p>
+
+              <div class="hero__actions">
+
+                <a
+                  class="btn btn--primary"
+                  href="mailto:fatimah.ahsan01@gmail.com"
+                >
+                  Email Me
+                </a>
+
+                <!-- Replace # with your actual CV file -->
+                <a
+                  class="btn btn--secondary"
+                  href="#"
+                >
+                  Download CV
+                </a>
+
+              </div>
+
+            </div>
+
+
+            <div>
+
+              <h3>
+                Contact Information
+              </h3>
+
+              <div class="contact-details">
+
+                <div class="contact-item">
+
+                  <div class="contact-icon">
+                    ✉
+                  </div>
+
+                  <div>
+
+                    <strong>Email</strong>
+
+                    <a
+                      href="mailto:fatimah.ahsan01@gmail.com"
+                    >
+                      fatimah.ahsan01@gmail.com
+                    </a>
+
+                  </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                  <div class="contact-icon">
+                    ☎
+                  </div>
+
+                  <div>
+
+                    <strong>Phone</strong>
+
+                    <a href="tel:+971562729144">
+                      +971 56 272 9144
+                    </a>
+
+                  </div>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                  <div class="contact-icon">
+                    📍
+                  </div>
+
+                  <div>
+
+                    <strong>Location</strong>
+
+                    <span>
+                      Abu Dhabi, UAE
+                    </span>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+
+              <h3 style="margin-top: 2rem;">
+                Academic & Professional Profiles
+              </h3>
+
+              <div class="profile-links">
+
+                <!-- Replace # with your actual URLs -->
+
+                <a
+                  class="profile-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Google Scholar
+                </a>
+
+                <a
+                  class="profile-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+
+                <a
+                  class="profile-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+
+                <a
+                  class="profile-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ResearchGate
+                </a>
+
+                <a
+                  class="profile-link"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  ORCID
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
     </main>
 
-    <script>
-      const header = document.querySelector('.site-header');
-      const menuToggle = document.getElementById('menuToggle');
-      const themeToggle = document.getElementById('themeToggle');
-      const navLinks = Array.from(document.querySelectorAll('.nav-link'));
-      const sections = Array.from(document.querySelectorAll('main section[id]'));
-      const root = document.documentElement;
 
-      const typingText = document.getElementById('typingText');
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+      <p>
+        © <span id="currentYear"></span> Fatma Ahsan.
+        All rights reserved.
+      </p>
+
+      <p>
+        Computer Science Researcher · Cybersecurity · AI ·
+        Machine Learning · Software Engineering
+      </p>
+
+    </footer>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+      const header =
+        document.querySelector(".site-header");
+
+      const menuToggle =
+        document.getElementById("menuToggle");
+
+      const themeToggle =
+        document.getElementById("themeToggle");
+
+      const navLinks =
+        Array.from(document.querySelectorAll(".nav-link"));
+
+      const sections =
+        Array.from(
+          document.querySelectorAll("main section[id]")
+        );
+
+      const root =
+        document.documentElement;
+
+      const typingText =
+        document.getElementById("typingText");
+
+
+      /* =========================
+         TYPING ANIMATION
+      ========================== */
+
       const roles = [
-        'AI Researcher',
-        'Machine Learning Researcher',
-        'Cybersecurity Researcher',
-        'Software Engineering Researcher'
+        "Cybersecurity Researcher",
+        "Machine Learning Researcher",
+        "AI Researcher",
+        "Software Security Researcher",
+        "Metaheuristic Optimization Researcher"
       ];
+
       let roleIndex = 0;
       let charIndex = 0;
       let deleting = false;
 
-      const savedTheme = localStorage.getItem('theme');
-      if (savedTheme === 'dark') {
-        root.setAttribute('data-theme', 'dark');
-        themeToggle.textContent = '☀️';
-      }
-
-      menuToggle.addEventListener('click', () => {
-        const isOpen = header.classList.toggle('open');
-        menuToggle.setAttribute('aria-expanded', String(isOpen));
-        menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-      });
-
-      navLinks.forEach((link) => {
-        link.addEventListener('click', () => {
-          header.classList.remove('open');
-          menuToggle.setAttribute('aria-expanded', 'false');
-          menuToggle.setAttribute('aria-label', 'Open navigation menu');
-        });
-      });
-
-      themeToggle.addEventListener('click', () => {
-        const isDark = root.getAttribute('data-theme') === 'dark';
-        if (isDark) {
-          root.setAttribute('data-theme', 'light');
-          themeToggle.textContent = '🌙';
-          localStorage.setItem('theme', 'light');
-        } else {
-          root.setAttribute('data-theme', 'dark');
-          themeToggle.textContent = '☀️';
-          localStorage.setItem('theme', 'dark');
-        }
-      });
-
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (!entry.isIntersecting) return;
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach((link) => {
-              link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
-            });
-          });
-        },
-        { rootMargin: '-35% 0px -55% 0px', threshold: 0.01 }
-      );
-
-      sections.forEach((section) => observer.observe(section));
 
       function runTypingAnimation() {
-        const currentRole = roles[roleIndex];
+
+        const currentRole =
+          roles[roleIndex];
 
         if (!deleting) {
+
           charIndex++;
-          typingText.textContent = currentRole.slice(0, charIndex);
+
+          typingText.textContent =
+            currentRole.slice(0, charIndex);
+
           if (charIndex === currentRole.length) {
+
             deleting = true;
-            setTimeout(runTypingAnimation, 1200);
+
+            setTimeout(
+              runTypingAnimation,
+              1400
+            );
+
             return;
           }
+
         } else {
+
           charIndex--;
-          typingText.textContent = currentRole.slice(0, charIndex);
+
+          typingText.textContent =
+            currentRole.slice(0, charIndex);
+
           if (charIndex === 0) {
+
             deleting = false;
-            roleIndex = (roleIndex + 1) % roles.length;
+
+            roleIndex =
+              (roleIndex + 1) % roles.length;
           }
         }
 
-        const speed = deleting ? 45 : 75;
-        setTimeout(runTypingAnimation, speed);
+        const speed =
+          deleting ? 45 : 75;
+
+        setTimeout(
+          runTypingAnimation,
+          speed
+        );
       }
 
+
       runTypingAnimation();
+
+
+      /* =========================
+         THEME
+      ========================== */
+
+      const savedTheme =
+        localStorage.getItem("theme");
+
+      if (savedTheme === "dark") {
+
+        root.setAttribute(
+          "data-theme",
+          "dark"
+        );
+
+        themeToggle.textContent = "☀️";
+      }
+
+
+      themeToggle.addEventListener(
+        "click",
+        () => {
+
+          const isDark =
+            root.getAttribute("data-theme") === "dark";
+
+          if (isDark) {
+
+            root.setAttribute(
+              "data-theme",
+              "light"
+            );
+
+            themeToggle.textContent = "🌙";
+
+            localStorage.setItem(
+              "theme",
+              "light"
+            );
+
+          } else {
+
+            root.setAttribute(
+              "data-theme",
+              "dark"
+            );
+
+            themeToggle.textContent = "☀️";
+
+            localStorage.setItem(
+              "theme",
+              "dark"
+            );
+          }
+
+        }
+      );
+
+
+      /* =========================
+         MOBILE MENU
+      ========================== */
+
+      menuToggle.addEventListener(
+        "click",
+        () => {
+
+          const isOpen =
+            header.classList.toggle("open");
+
+          menuToggle.setAttribute(
+            "aria-expanded",
+            String(isOpen)
+          );
+
+          menuToggle.setAttribute(
+            "aria-label",
+            isOpen
+              ? "Close navigation menu"
+              : "Open navigation menu"
+          );
+        }
+      );
+
+
+      navLinks.forEach(
+        (link) => {
+
+          link.addEventListener(
+            "click",
+            () => {
+
+              header.classList.remove(
+                "open"
+              );
+
+              menuToggle.setAttribute(
+                "aria-expanded",
+                "false"
+              );
+
+              menuToggle.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+              );
+            }
+          );
+        }
+      );
+
+
+      /* =========================
+         ACTIVE NAVIGATION
+      ========================== */
+
+      const observer =
+        new IntersectionObserver(
+          (entries) => {
+
+            entries.forEach(
+              (entry) => {
+
+                if (!entry.isIntersecting) {
+                  return;
+                }
+
+                const id =
+                  entry.target.getAttribute(
+                    "id"
+                  );
+
+                navLinks.forEach(
+                  (link) => {
+
+                    link.classList.toggle(
+                      "active",
+                      link.getAttribute(
+                        "href"
+                      ) === `#${id}`
+                    );
+
+                  }
+                );
+
+              }
+            );
+
+          },
+          {
+            rootMargin:
+              "-35% 0px -55% 0px",
+
+            threshold: 0.01
+          }
+        );
+
+
+      sections.forEach(
+        (section) =>
+          observer.observe(section)
+      );
+
+
+      /* =========================
+         CURRENT YEAR
+      ========================== */
+
+      document.getElementById(
+        "currentYear"
+      ).textContent =
+        new Date().getFullYear();
+
     </script>
+
   </body>
 </html>
